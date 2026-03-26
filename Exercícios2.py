@@ -74,3 +74,12 @@ if n1 > n2:
     print(f'o maior valor é {n1}')
 else:
     print(f"O maior valor é {n2}")
+
+#Exercício 11
+vel = int(input("Digite a velocidade que o carro estava trafegando: "))
+
+if vel > 80:
+    print("Você estava acima do limite de velocidade e foi multado")
+    print(f'Você deverá pagar R${(vel - 80) * 5} como multa')
+else:
+    print("Você estava abaixo do limite de velociade, parabéns!")
