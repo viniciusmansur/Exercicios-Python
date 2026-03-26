@@ -56,3 +56,21 @@ n2 = int(input("Digite o segundo número: "))
 s = n1 % 2 == n2 % 2
 
 print(f"Os números {n1} e {n2} possuem paridade distinta? {s}")
+
+#Exercício 9
+a = int(input("Digite o valor de a: "))
+b = int(input("Digite o valor de b: "))
+
+if a > b:
+    print("a é maior que b")
+else:
+    print("b é maior que a")
+
+#Exercício 10
+n1 = int(input("Digite o primeiro valor: "))
+n2 = int(input("Digite o segundo valor: "))
+
+if n1 > n2:
+    print(f'o maior valor é {n1}')
+else:
+    print(f"O maior valor é {n2}")
