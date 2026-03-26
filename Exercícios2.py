@@ -48,3 +48,11 @@ dia = int(input("Digite o número de dias que o carro foi alugado: "))
 soma = km * 0.15 + 60 * dia
 
 print(f'O carro alugado por {dia} dias e rodado por {km} Km, sairá por R${soma}')
+
+#Exercício 8
+n1 = int(input("Digite o primeiro número: "))
+n2 = int(input("Digite o segundo número: "))
+
+s = n1 % 2 == n2 % 2
+
+print(f"Os números {n1} e {n2} possuem paridade distinta? {s}")
