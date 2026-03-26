@@ -83,3 +83,48 @@ if vel > 80:
     print(f'Você deverá pagar R${(vel - 80) * 5} como multa')
 else:
     print("Você estava abaixo do limite de velociade, parabéns!")
+
+#Exercício 12
+sal = float(input("Digite seu salário: "))
+if sal > 1250.00:
+    print(f"Parabéns você recebeu um aumento de 10%! Seu salário agora será de {sal * 1.10}")
+else:
+    print(f"Parabéns você recebeu um aumento de 15%! Seu salário agora será de {sal *1.15}")
+
+#Exercício 13
+a = int(input("Digite o primeiro número: "))
+b = int(input("Digite o segundo número: "))
+c = int(input("Digite o terceiro número: "))
+
+if a > b > c:
+    print(a, c)
+elif a > c > b:
+    print(a, b)
+elif b > a > c:
+    print(b, c)
+
+#Exercício 14
+n = int(input("Digite o número: "))
+
+if n % 2 == 0:
+    if n < 100:
+        print(f"o número {n} é par e menor que 100")
+    else:
+        print(f"O número {n}")
+if n % 2 == 1:
+    if n < 100:
+        print(f"O número {n} é ímpar e menor que 100")
+    else:
+        print(f"O número {n} é ímpar e maior que 100")
+        
+#Exercício 15
+n = int(input("Digite o número: "))
+
+if n % 2 == 0 and n < 100:
+    print(f"O número {n} é par e menor que 100")
+elif n % 2 == 0 and n >= 100:
+    print(f'O número {n} é par e maior ou igual que 100')
+elif n % 2 == 1 and n < 100:
+    print(f"O número {n} é impar e menor que 100")
+elif n % 2 == 1 and n >= 100:
+    print(f"O número {n} é impar e maior ou igual a 100")
