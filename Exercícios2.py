@@ -110,12 +110,12 @@ if n % 2 == 0:
     if n < 100:
         print(f"o número {n} é par e menor que 100")
     else:
-        print(f"O número {n}")
+        print(f"O número {n} é par e maior ou igual a 100")
 if n % 2 == 1:
     if n < 100:
         print(f"O número {n} é ímpar e menor que 100")
     else:
-        print(f"O número {n} é ímpar e maior que 100")
+        print(f"O número {n} é ímpar e maior ou igual a 100")
         
 #Exercício 15
 n = int(input("Digite o número: "))
@@ -128,3 +128,24 @@ elif n % 2 == 1 and n < 100:
     print(f"O número {n} é impar e menor que 100")
 elif n % 2 == 1 and n >= 100:
     print(f"O número {n} é impar e maior ou igual a 100")
+
+# Exercício 16
+print("Olá usúário!")
+vel = int(input("Digite a velocidade que estava trafegando: "))
+
+if vel > 110:
+    x = vel - 110
+    valor = x * 5
+    print(f"Você foi multado em R${valor}")
+    pag = input("Qual será a forma de pagamento? (pix, crédito, débito ou dinheiro): ")
+    if pag == 'pix':
+        real = valor * 0.85
+        print(f"Com pagamento pix, a sua multa de R${valor} passará a ser de R${real}")
+    elif pag == 'crédito':
+        real = valor * 0.9
+        print(f"Com pagamento em crédito, a sua multa de R${valor} passará a ser de R${real}")
+    else:
+        print(f"O valor a ser pago é de R${valor}")
+else:
+    print("Você não foi multado, parabéns!")
+print("Fim da operação")
