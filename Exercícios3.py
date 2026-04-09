@@ -43,3 +43,40 @@ x = pal[::-1]
 print(f"Essa palavra ao contrário é: {pal[::-1]}")
 if pal == x:
     print("Essa palavra é um palíndromo!")
+
+#Exercício 7
+pal = input("Digite uma palavra: ")
+x = pal[::-1]
+print(f"Essa palavra ao contrário é: {pal[::-1]}")
+if pal == x:
+    print("Essa palavra é um palíndromo!")
+
+#Exercício 8
+cpf = input("Digite seu CPF: ")
+
+d1 = int(cpf[0])
+d2 = int(cpf[1:2])
+val = int(cpf[:9])
+reg = cpf[8:9]
+
+
+if reg == '0':
+    print("Você é de RS")
+elif reg == '1':
+    print("Você é da região Centro-Oeste")
+elif reg == '2':
+    print("Você é da região Norte")
+elif reg == '3':
+    print("Você é de CE ou MA ou PI")
+elif reg == '4':
+    print("Você é de CE ou MA ou PI")
+elif reg == '5':
+    print("Você é de AL ou PB ou PE ou RN")
+elif reg == '6':
+    print("Você é de Minas Gerais")
+elif reg == '7':
+    print("Você é de Espirito Santo ou Rio de Janeiro")
+elif reg == '8':
+    print("Você é de São Paulo")
+elif reg == '9':
+    print("Você é de Paraná ou Santa Catarina")
