@@ -21,3 +21,25 @@ elif kwh > 5000 and tipo == 'I':
 print(f"O valor da conta ficou em R${val}")
 
 #Exercício 2
+nome = input("Digite seu nome: ")
+print(f'Seu nome tem {len(nome)} e a primeira letra é {nome[:1]}')
+
+#Exercício 3
+pal = input("Digite uma palavra: ")
+print(pal[::2])
+
+#Exercício 4
+pal = input("Digite uma palavra: ")
+print(pal[1::2])
+
+#Exercício 5
+fra1 = input("Digite uma frase: ")
+fra2 = input("Digite outra frase: ")
+print(fra1[1:] + fra2[1:])
+
+#Exercício 6
+pal = input("Digite uma palavra: ")
+x = pal[::-1]
+print(f"Essa palavra ao contrário é: {pal[::-1]}")
+if pal == x:
+    print("Essa palavra é um palíndromo!")
