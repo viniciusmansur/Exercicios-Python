@@ -1,4 +1,4 @@
-#Exercício 1
+# Exercício 1
 flag = True
 print(f'{'Produtos':-^10s}')
 print(f'{'Produto 1':<3s} | R$ 5,00')
@@ -24,3 +24,22 @@ else:
 
 if flag:
     print(f"Olá {nome}, você tem {idade} anos e sua compra saiu por R${prod:.2f}")
+
+# Exercício 2
+num = 1
+while num <= 100:
+    print(num)
+    num += 1
+
+# Exercício 3
+num = 50
+while num <= 100:
+    print(num)
+    num += 1
+
+# Exercício 4
+num = 10
+while num >= 0:
+    print(num)
+    num -= 1
+print('Fogo!')
