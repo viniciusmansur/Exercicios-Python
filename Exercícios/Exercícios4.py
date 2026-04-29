@@ -85,3 +85,51 @@ while num != 0:
     soma = num + soma
     num = int(input("Digite um número: "))
 print(f"você digitou 0! A soma dos números digitados foram: {soma}")
+
+# Exercício 9
+print(f'{'Maquina registradora'}')
+print("Código  |  Preço ")
+print('1       |   0,50')
+print('2       |   1,00')
+print('3       |   4,00')
+print('5       |   7,00')
+print('9       |   8,00')
+print('Digite 0 para finalizar')
+
+soma = 0
+cod1 = 0.5
+cod2 = 1
+cod3 = 4
+cod5 = 7
+cod9 = 8
+
+while True:
+    prod = int(input("Digite o código do produto: "))
+    if prod == 0:
+        print(f"Sua compra ficou R${soma:.2f}")
+        break
+    if prod == 1:
+        tx = cod1
+    elif prod == 2:
+        tx = cod2
+    elif prod == 3:
+        tx = cod3
+    elif prod == 5:
+        tx = cod5
+    elif prod == 9:
+        tx = cod9
+    else:
+        print("Código Inválido")
+        continue
+    qtd = int(input("Digite a quantidade de produtos: "))
+    print("----------------")
+    soma = soma + tx*qtd
+
+# Exercício 10
+n = int(input("Digite um número: "))
+soma = 0
+
+while n != 0:
+    soma = soma + n
+    n = n - 1
+print(f'{soma}')
