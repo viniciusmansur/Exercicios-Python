@@ -4,7 +4,7 @@ import random
 din = float(random.randint(1000, 2000))
 
 usuarios = [
-    {"nome": "Carlos", "id": '12345'},
+    {"nome": "Carlos", "id": '12345', "dinheiro": 1000},
     {"nome": "Cleber", "id": '98765'},
     {"nome": "Jonas", "id": '24680'}
 ]
@@ -63,15 +63,15 @@ def main():
     global din
     while True:
         print('============================  \n  Seja bem vindo\n============================')
-        print(f"R$ {din}\n============================")
+        print(f"R$ {din:.2f}\n============================")
         print("Digite + para adicionar um valor a conta")
         print("Digite - para retirar um valor da conta")
         print("Digite . para sair")
         op = input("- ")
         if op == '+':
-            din = din + int(input("Digite a quantia que deseja adicionar: "))
+            din = din + float(input("Digite a quantia que deseja adicionar: "))
         elif op == '-':
-            din = din - int(input("Digite a quantia que deseja retirar: "))
+            din = din - float(input("Digite a quantia que deseja retirar: "))
         elif op == '.':
             time.sleep(1.2)
             return
