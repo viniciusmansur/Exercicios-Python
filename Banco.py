@@ -50,6 +50,7 @@ def login():
                 print(f"Seja bem vindo, {i["nome"]}")
                 time.sleep(1.3)
                 main()
+                return
         else:
             tentativas += 1
             print(f"Senha não encontrada. Tentativas: {tentativas}")
@@ -73,7 +74,7 @@ def main():
             din = din - int(input("Digite a quantia que deseja retirar: "))
         elif op == '.':
             time.sleep(1.2)
-            opcoes()
+            return
         else:
             print("Opção invalida")
 
