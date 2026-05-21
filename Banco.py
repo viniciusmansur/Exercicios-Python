@@ -4,7 +4,7 @@ import random
 din = float(random.randint(1000, 2000))
 
 usuarios = [
-    {"nome": "Carlos", "id": '12345', "dinheiro": 1000},
+    {"nome": "Carlos", "id": '12345'},
     {"nome": "Cleber", "id": '98765'},
     {"nome": "Jonas", "id": '24680'}
 ]
@@ -32,10 +32,10 @@ def registrar():
         
         if not isinstance(nome, str):
             print("Digite um nome válido")
-
+            registrar()
         elif len(id) != 5:
             print("Senha inválida, digite uma senha de 5 números")
-
+            registrar()
         else:
             break
     usuarios.append({"nome": nome, "id": id})
