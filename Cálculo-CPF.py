@@ -8,7 +8,7 @@ if digver1 == 1 or digver1 == 2:
 elif digver1 >= 2:
     digver1 = 11 - digver1
 
-# Obtenção dígito verificador 2 (último númeor do cpf)
+# Obtenção dígito verificador 2 (último número do cpf)
 digver2 = (int(cpf[0]) * 11 + int(cpf[1]) * 10 + int(cpf[2]) * 9 + int(cpf[3]) * 8 + int(cpf[4]) * 7 + int(cpf[5]) * 6 + int(cpf[6]) * 5 + int(cpf[7]) * 4 + int(cpf[8]) * 3 + int(cpf[9]) * 2) % 11
 if digver2 == 1 or digver2 == 0:
     digver2  = 0

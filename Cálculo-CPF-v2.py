@@ -39,11 +39,11 @@ digver2 = ver2(cpf)
 def comparador(digver1, digver2, cpf):
     global reg
     if digver1 == int(cpf[9]) and digver2 == int(cpf[10]):
-        val = 'Esse cpf é válido'
+        val = 'Este CPF é válido'
         for i in range(len(regioes)):
             if  i == reg:
                 return f"{val}, você é {regioes[i]}"
     else:
-        return 'Esse cpf é inválido'
+        return 'Este CPF é inválido'
 
 print(comparador(digver1, digver2, cpf))
