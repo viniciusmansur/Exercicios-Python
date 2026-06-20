@@ -1,3 +1,5 @@
+from time import sleep
+
 div = '-----------------------------'
 
 infos = [
@@ -20,19 +22,19 @@ def main (filmes, infos):
         for filme, preco in filmes.items():
             print(f"{filme}: R${preco:.2f}")
         print(div)
-        print("1. Alugar filme")
-        print("2. Sair")
+        print("1. Alugar filme\n2. Sair")
         print("Digite a opção que deseja acessar")
         op = input('- ')
         if op == '1':
             while True:
-                print("\n1. Acessar conta")
-                print("2. Cadastrar conta")
-                print("3. Voltar")
+                print(div)
+                print(f"{'Acesse sua conta para alugar um filme':^2s}")
+                print("\n1. Acessar conta\n2. Cadastrar conta\n3. Voltar")
                 print("Digite a opção que deseja acessar")
                 op = input("- ").lower()
                 if op == '1':
-                    processamento()
+                    login(filmes, infos)
+                    break
                 elif op == '2':
                     cadastro(infos)
                 elif op == '3':
@@ -45,8 +47,63 @@ def main (filmes, infos):
             print("Opção inválida")
 
 
-def processamento():
-    print("Tudo certin")
+def login(filmes, infos):
+    while True:
+        print(div)
+        print("Digite seu nome")
+        nome = input("- ").capitalize()
+        print("\nDigite seu id")
+        id = int(input("- "))
+        for i in infos:
+            if nome == i.get("nome") and id == i.get("id"):
+                print("Dados confirmados")
+                processamento(filmes)
+                return
+            else:
+                print("Nome ou id inválidos")
+                break
+
+def processamento(filmes):
+    total = 0
+    loop = 0
+    while True:
+        print(div)
+        print("Filmes desponíveis hoje:")
+        for filme, preco in filmes.items():
+            print(f"{filme} - R${preco:.2f}")
+        if loop > 0:
+            print("\nDigite 0 para retornar.")
+            print("Digite 1 para alugar.")
+        print("Digite o nome do filme que deseja alugar:")
+        filme = input("- ")
+        if filme == '0':
+            return
+        elif filme == '1':
+            pagamento(total)
+            return
+        total += filmes.get(filme.title())
+        print(f"Total até agora: {total}")
+        loop += 1
+
+def pagamento(total):
+    ponto = '.'
+    print(div)
+    print("Seu total ficou:")
+    print(f"R${total:.2f}")
+    print("\nOpções de pagamento:")
+    print("1. Dinheiro\n2. Cartão de Crédito\n3. Cartão de Débito")
+    print("Digite qual opção usará:")
+    input("- ")
+    for c in range(10):
+        if len(ponto) == 4:
+            ponto = '.'
+        print('Processando'+ponto)
+        ponto+='.'
+        sleep(1)
+    print("Obrigado por escolher a locadora Sessão Filmes!")
+    sleep(2)
+    return
+
 
 def cadastro(infos):
     while True:
