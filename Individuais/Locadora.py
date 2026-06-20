@@ -41,10 +41,12 @@ def main (filmes, infos):
                     break
                 else:
                     print("Opção inválida")
+                    sleep(1)
         elif op == '2':
             break
         else:
             print("Opção inválida")
+            sleep(1)
 
 
 def login(filmes, infos):
@@ -57,11 +59,10 @@ def login(filmes, infos):
         for i in infos:
             if nome == i.get("nome") and id == i.get("id"):
                 print("Dados confirmados")
+                sleep(1)
                 processamento(filmes)
                 return
-            else:
-                print("Nome ou id inválidos")
-                break
+        print("Nome ou id inválidos")
 
 def processamento(filmes):
     total = 0
@@ -108,14 +109,16 @@ def pagamento(total):
 def cadastro(infos):
     while True:
         print(div)
-        nome = input("Digite seu nome: ")
+        nome = input("Digite seu nome: ").capitalize()
         id = input("Digite o id que deseja cadastrar (4 números): ")
         if not id.isnumeric():
             print("id inválido, digite apenas números.")
         elif len(id) != 4:
             print("id inválido, digite apenas 4 números")
         else:
-            infos.append({"nome": nome, "id": id})
+            infos.append({"nome": nome, "id": int(id)})
+            print("Cadastro criado!")
+            sleep(1)
             return infos
         
 
