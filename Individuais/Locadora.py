@@ -87,6 +87,7 @@ def processamento(filmes):
         valor = filmes.get(filme.title())
         if valor == None:
             print("Filme não encontrado!")
+            sleep(1)
         else:
             total += filmes.get(filme.title())
             print(f"Total até agora: {total}")
@@ -126,8 +127,10 @@ def cadastro(infos):
         id = input("Digite o id que deseja cadastrar (4 números): ")
         if not id.isnumeric():
             print("id inválido, digite apenas números.")
+            sleep(1)
         elif len(id) != 4:
             print("id inválido, digite apenas 4 números")
+            sleep(1)
         else:
             infos.append({"nome": nome, "id": int(id)})
             print("Cadastro criado!")
