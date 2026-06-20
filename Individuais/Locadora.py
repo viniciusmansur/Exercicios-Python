@@ -72,8 +72,9 @@ def processamento(filmes):
         print("Filmes desponíveis hoje:")
         for filme, preco in filmes.items():
             print(f"{filme} - R${preco:.2f}")
+        print()
         if loop > 0:
-            print("\nDigite 0 para retornar.")
+            print("Digite 0 para retornar.")
             print("Digite 1 para alugar.")
         print("Digite o nome do filme que deseja alugar:")
         filme = input("- ")
@@ -82,19 +83,31 @@ def processamento(filmes):
         elif filme == '1':
             pagamento(total)
             return
-        total += filmes.get(filme.title())
-        print(f"Total até agora: {total}")
-        loop += 1
+        
+        valor = filmes.get(filme.title())
+        if valor == None:
+            print("Filme não encontrado!")
+        else:
+            total += filmes.get(filme.title())
+            print(f"Total até agora: {total}")
+            sleep(1)
+            loop += 1
 
 def pagamento(total):
     ponto = '.'
-    print(div)
-    print("Seu total ficou:")
-    print(f"R${total:.2f}")
-    print("\nOpções de pagamento:")
-    print("1. Dinheiro\n2. Cartão de Crédito\n3. Cartão de Débito")
-    print("Digite qual opção usará:")
-    input("- ")
+    while True:
+        print(div)
+        print("Seu total ficou:")
+        print(f"R${total:.2f}")
+        print("\nOpções de pagamento:")
+        print("1. Dinheiro\n2. Cartão de Crédito\n3. Cartão de Débito")
+        print("Digite qual opção usará:")
+        op = input("- ")
+        if op != 1 or op != 2 or op != 3:
+            print("Opção inválida")
+            sleep(1)
+        else:
+            break
     for c in range(10):
         if len(ponto) == 4:
             ponto = '.'
