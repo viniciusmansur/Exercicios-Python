@@ -10,7 +10,7 @@ infos = [
 filmes = {
     "Star Wars": 12,
     "Titanic": 15,
-    "De Volta para o Futuro": 10,
+    "De Volta Para O Futuro": 10,
     "Forrest Gump": 8}
 
 def main (filmes, infos):
@@ -103,21 +103,21 @@ def pagamento(total):
         print("\nOpções de pagamento:")
         print("1. Dinheiro\n2. Cartão de Crédito\n3. Cartão de Débito")
         print("Digite qual opção usará:")
-        op = input("- ")
-        if op != 1 or op != 2 or op != 3:
+        op = int(input("- "))
+        if op == 1 or op == 2 or op == 3:
+            for c in range(10):
+                if len(ponto) == 4:
+                    ponto = '.'
+                print('Processando'+ponto)
+                ponto+='.'
+                sleep(1)
+            print("Obrigado por escolher a locadora Sessão Filmes!")
+            sleep(4)
+            return
+        else:
             print("Opção inválida")
             sleep(1)
-        else:
             break
-    for c in range(10):
-        if len(ponto) == 4:
-            ponto = '.'
-        print('Processando'+ponto)
-        ponto+='.'
-        sleep(1)
-    print("Obrigado por escolher a locadora Sessão Filmes!")
-    sleep(2)
-    return
 
 
 def cadastro(infos):
