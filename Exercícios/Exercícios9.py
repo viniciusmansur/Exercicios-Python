@@ -51,11 +51,10 @@ def adicionar_produto(produto):
     return
 
 def remover_produto(produto):
-    for x in carrinho:
-        for i in range(len(carrinho)):
-            if produto in x:
-                carrinho.pop(i)
-                break
+    for i in range(len(carrinho)):
+        if carrinho[i] == produto:
+            print(f"{carrinho.pop(i)} Removido")
+            break
 
 def ver_carrinho():
     print(carrinho)
