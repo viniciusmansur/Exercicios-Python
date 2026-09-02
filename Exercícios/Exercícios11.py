@@ -91,11 +91,58 @@ def main6():
         matriz.append(l)
     print(matriz)
 
-main6()
-
 #Exercício 7
-matriz = [[1, 2, 3]
-          [4, 5, 6]
-          [7, 8, 9]]
-
 def main7():
+    linhas = int(input("Digite a quantidade de linhas: "))
+    colunas = int(input("Digite a quantidade de colunas: "))
+    matriz = []
+
+    for j in range(linhas):
+        linha = []
+        for i in range(colunas):
+            linha.append(int(input("Digite o valor para adicionar")))
+        matriz.append(linha)
+
+    print(matriz)
+
+#Exercício 8
+def main8(matriz):
+    contador = 0
+
+    for i in matriz:
+        for j in i:
+            contador += j
+
+    print(contador)
+
+#main8([[1, 2], [3, 4]])
+
+#Exercício 9
+def main9(matriz):
+    matriztransp = []
+
+    for i in range(len(matriz)):
+        linha = []
+        for j in range(len(matriz)):
+            linha.append(matriz[j][i]) # Busca primeiro o índice da lista dentro da matriz (com a variável i) e depois o valor com o outro índice
+        matriztransp.append(linha)
+
+    return matriztransp
+
+
+#print(main9([[1, 2], [3, 4]]))  #[[1, 3], [2, 4]]
+
+#Exercício 10
+def main10(lista):
+    maior = lista[0]
+    menor = lista[0]
+
+    for i in range(len(lista)):
+        if i < menor:
+            menor = i
+
+        elif i > maior:
+            maior = i
+    return maior, menor
+
+print(main10([1, 5, 2, 6, 3]))
