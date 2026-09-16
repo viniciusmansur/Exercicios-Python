@@ -83,6 +83,6 @@ def main6():
 
     resposta = requests.get(url)
     dic = resposta.json()
-    print(f"Nome do pokemon: {dic["name"]}\nTipo: {dic["types"][]}\nID: {dic["id"]}")
+    print(f"Nome do pokemon: {dic["name"]}\nTipo: {dic["types"][0]["type"]["name"]} | {dic["types"][1]["type"]["name"]}\nID: {dic["id"]}")
 
 main6()
