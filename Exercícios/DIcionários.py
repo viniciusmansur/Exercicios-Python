@@ -3,5 +3,5 @@ capitais = {"Brasil": "Brasília",
             "França": "Paris",
             "Alemanha": "Berlim"}
 
-print(help(capitais))
+print(capitais)
 print(capitais.items())
